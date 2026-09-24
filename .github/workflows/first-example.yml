@@ -34,6 +34,8 @@ jobs:
 
       - name: testing
         run: |
+          ls
+          ls welcome
           cat welcome.txt
 
   deploy_job:
