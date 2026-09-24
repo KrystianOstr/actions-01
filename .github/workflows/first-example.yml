@@ -30,12 +30,10 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: welcome
-          path: welcome.txt
 
       - name: testing
         run: |
           ls
-          ls welcome
           cat welcome.txt
 
   deploy_job:
