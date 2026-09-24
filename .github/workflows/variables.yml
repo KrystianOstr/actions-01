@@ -36,7 +36,3 @@ jobs:
     steps:
       - name: Docker Run
         run: echo docker run -d -p 8080:80 $CONTAINER_REGISTRY/$DOCKER_USERNAME/$IMAGE_NAME:latest
-
-      - name: sleep
-        run: sleep 600
-        #test
