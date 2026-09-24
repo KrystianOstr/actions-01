@@ -34,7 +34,7 @@ jobs:
 
       - name: testing
         run: |
-          grep -i welcome welcome.txt
+          cat welcome.txt
 
   deploy_job:
     needs: test_job
