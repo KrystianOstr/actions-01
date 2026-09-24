@@ -3,7 +3,7 @@ name: My First Workflow
 on: [push, fork]
 
 jobs: 
-  first_job:
+  build_job:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -20,3 +20,21 @@ jobs:
 
       - name: read file
         run: cat README.md
+
+	test_job:
+		runs-on: ubuntu-latest
+		steps:
+			-	name: checkout
+				uses: actions/checkout@v4
+
+			- name: testing
+				run: echo "testing..."
+
+	deploy_job:
+		runs-on: ubuntu-latest
+		steps:
+			- name: checkout
+				uses: actions/checkout@v4
+			
+			- name: deploy the code
+				run: echo "deploying..."
