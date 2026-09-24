@@ -30,9 +30,13 @@ jobs:
   deploy:
     needs: docker
     runs-on: ubuntu-latest
-    concurrency:
-      group: prod-deploy
-      cancel-in-progress: true
+    # concurrency:
+    #   group: prod-deploy
+    #   cancel-in-progress: true
+    timeout-minutes: 1
     steps:
       - name: Docker Run
         run: echo docker run -d -p 8080:80 $CONTAINER_REGISTRY/$DOCKER_USERNAME/$IMAGE_NAME:latest
+
+      - name: Long sleep
+        run: sleep 600s
