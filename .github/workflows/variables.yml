@@ -1,7 +1,6 @@
 name: Variables
 
-on: 
-  workflow_dispatch:
+on: push
 
 env:
     CONTAINER_REGISTRY: docker.io
