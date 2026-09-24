@@ -1,6 +1,6 @@
 name: My First Workflow
 
-on: [push, fork]
+on: [push, fork, workflow_dispatch]
 
 jobs:
   build_job:
